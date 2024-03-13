@@ -1,0 +1,81 @@
+         <!--Here all the Things is makde by dynamically-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi level Itrations</title>
+    
+      <script>
+        var data =[
+            {Category:"Electronic", Product:["TV","Mobile"]},
+            {Category:"Footwear", Product:["NIke Coursel","LeeBoot"]},
+        ];
+
+     function bodyload() {
+                for (var item of data)
+            { 
+                var outerli = document.createElement("li");
+                outerli.innerHTML = item.Category;
+            for (var product of item.Product)
+            {
+              var ul = document.createElement("ul");
+              var innerli = document.createElement("li");
+              innerli.innerHTML = product;
+              ul.appendChild(innerli);
+              outerli.appendChild(ul);
+              document.querySelector("ol").appendChild(outerli);
+            }
+            }
+
+            for(var items of data)
+                {  
+                  
+                    var optgroup=document.createElement("optgroup");
+                    optgroup.label = items.Category;
+
+                for(var products of items.Product)
+                {
+                    var option =document.createElement("option");
+                   
+                    option.text=products;
+                    optgroup.appendChild(option);
+                     
+                    document.querySelector("select").appendChild(optgroup);
+
+                }
+   
+                }
+        }  
+            
+      </script>
+</head>
+<body onload="bodyload()">
+   <h3>generate Dynamically Nested order-list</h3>
+     <ol>
+
+     </ol>
+
+     <hr>
+     <br>
+     <select>
+
+     </select>
+
+    <!--<select name="opt" id="opt">
+        <optgroup label="electronic">
+            <option value="name">1ame</option>
+            <option value="Fname">name</option>
+            <option value="hame">2ame</option>
+            <option value="kname">name</option>
+        </optgroup>
+
+        <optgroup label="TV">
+            <option value="name">1ame</option>
+            <option value="Fname">name</option>
+            <option value="hame">2ame</option>
+            <option value="kname">name</option>
+        </optgroup>
+    </select>-->
+</body>
+</html>

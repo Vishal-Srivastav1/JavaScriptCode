@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>JS</title>
+ </head>
+ <body>
+  <h3>demo on multiplication table</h3>
+  <label>Table number</label>
+   <input type="text" id="tn"/>
+   <button onclick="printTable()">print table</button>
+
+  <script>
+   function printTable()
+   {
+     let n = tn.value;
+	 let i,res;
+	 for(i=1;i<=10;i++){
+        res=n*i;
+		document.write(n+"*"+i+"="+res+"<br>");
+	}
+   }
+  </script>
+ </body>
+</html>

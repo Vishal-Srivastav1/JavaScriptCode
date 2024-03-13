@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>JS</title>
+ </head>
+ <body>
+ <h3>result from</h3>
+  <table style="background:cyan;height="300px;" align="center">
+  <caption><h3>Student Mark Report</h3></caption>
+  <tr>
+     <td><lable>ROLLNO</lable></td>
+	 <td><input type="text" id="rno" autofocus/> </td>
+  </tr>
+   
+   <tr>
+     <td><lable>Name</lable></td>
+	 <td><input type="text" id="sna"/> </td>
+  </tr>
+
+    <tr>
+      <td colspan="2">Marks in</td>
+	</tr>
+
+   <tr>
+     <td><lable>HTML</lable></td>
+	 <td><input type="text" id="hm"/> </td>
+  </tr>
+  
+  <tr>
+     <td><lable>CSS</lable></td>
+	 <td><input type="text" id="cm"/> </td>
+  </tr> 
+  
+  <tr>
+     <td><lable>JavaScript</lable></td>
+	 <td><input type="text" id="jm"/> </td>
+  </tr> 
+  
+  <tr>
+     <td><lable>Bootstrap</lable></td>
+	 <td><input type="text" id="bm"/> </td>
+  </tr> 
+
+   <tr align="center">
+   <td colspan="2"><button onclick="getResult()">get result</button></td>
+  </tr>
+
+  <tr align="center">
+  <td colspan="2">
+   <output id="total"></output><br>
+   <output id="average"></output><br>
+   <output id="grade"></output>
+   </td>
+  </tr>
+ </table>
+
+   <script>
+    function getResult()
+	{
+     let html,css,js,bs,tot,avg,grd;
+	 html = +hm.value;
+	 css = +cm.value;
+	 js = +jm.value;
+	 bs = +bm.value;
+      //Calculations
+	  tot = html+css+js+bs;
+      avg = tot/4;
+
+	  if(html>39 &&css>39 &&js>39 &&bs>39)
+		{
+			 if(avg>=90)
+			    grd="A+";
+			 else if(avg>=80)
+			     grd="A";
+             else if(avg>=70)
+			     grd="B+";
+             else if(avg>=60)
+			     grd="B";
+             else if(avg>=50)
+			     grd="C";
+			 else
+			     grd="D";
+		}else{
+			grd="Fail";
+		}
+		//Displaying data
+		total.value="Total Marks:"+tot;
+		average.value="Average   :"+avg;
+		grade.value= "Grade:"+grd;
+	
+	}
+   </script>
+ </body>
+</html>
+
+
+
+
+
+
+
+
+

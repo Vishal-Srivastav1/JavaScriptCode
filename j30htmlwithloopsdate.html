@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>JS</title>
+ </head>
+ <body>
+ <h3>demo on html with loops</h3>
+  <script>
+   for(let i=1; i<=6; i++)
+    document.write(`<h2>welcome</h2>`);
+  </script>
+       <br>
+  <label>Date of birth</label><br>
+   <select id="date" name="date">
+    <script>
+     for(let d=1;d<=31;d++)
+      document.write(`<option value=`+d+`>`+d+`</option>`);
+    </script>
+   </select>
+
+	<select id="month" name="month">
+	 <script>
+      const months=["January","February","March","April","May","June","July","August","September",
+	      "October","November","December"];
+	   for(let m=0; m<=11; m++)
+	    document.write(`<option value=`+months[m]+`>`+months[m]+`</option>`);
+	 </script>
+    </select>
+
+	<select id="year" name="year">
+	 <script>
+	  for(let y=2022; y>=1905; y--)
+	   document.write(`<option value=`+y+`>`+y+`</option>`);
+	 </script>
+    </select>
+ </body>
+</html>

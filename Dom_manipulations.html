@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+ <h3>demo on Dom manipulations</h3>
+<output id="res1"></output><br>
+<output id="res2"></output><br>
+<output id="res3"></output><br>
+
+<script>
+const op1 =document.getElementById("res1");
+op1.innerText="hellow";
+const op2 =document.getElementById("res2");
+op2.innerText="<strong>&#8377;1000</strong>"; // not working
+const op3 =document.getElementById("res3");
+op3.innerHTML="<strong>&#8377;1000</strong>"; //working
+
+</script>
+ </body>
+</html>

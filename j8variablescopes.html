@@ -1,0 +1,32 @@
+<!--example on js -->
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>js</title>
+ </head>
+ <body>
+ <h3>demo on variable scopes</h3>
+     <script>
+	      var n=100; //global
+	        document.write(n+"<br>");
+	   </script>
+
+<h2>HELLO WORD</h2>
+
+<script>
+
+     document.write(n+"<br>");
+
+	 //fun defination
+	 function myfun()
+	 {
+		 let x=11;  //local dec
+		  document.write(x+"<br>");
+		   document.write(n+"<br>");   //valid,bcz global declaration
+	 }
+	 myfun();  //calling
+	  //document.write(x+"<br>");   //error,bcz local declaraction
+</script>
+</body>
+</html>

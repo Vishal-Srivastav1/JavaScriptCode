@@ -1,0 +1,25 @@
+<!--example on js -->
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>js</title>
+    <!--linking external file-->
+  <script src="myscript.js">
+     // document.write("hello");
+  </script>
+ </head>
+ <body>
+ <h3>demo on external script</h3>
+	  <!--here function are executed while loading webpage
+        <script>
+	   fun1();      //calling
+		fun2();
+		</script>-->
+      <br>
+	  <!--here function executed whenever we click on button-->
+	  <button onclick="fun1()">call fun</button>
+	  <br>
+	   <button onclick="fun2()">call fun</button>
+</body>
+</html>
